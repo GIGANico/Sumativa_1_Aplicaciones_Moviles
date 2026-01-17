@@ -8,15 +8,20 @@ import androidx.navigation.compose.rememberNavController
 import com.example.sumativa_1.navigation.NavGraph
 import com.example.sumativa_1.ui.theme.Sumativa_1Theme
 
-data class Usuario(val nombre: String, val clave: String)
+data class Usuario(
+    val nombreCompleto: String,
+    val correo: String,
+    val nombreUsuario: String,
+    val clave: String
+)
 
-// Requerimiento: Array de 5 usuarios registrados
+// Requerimiento: Array de 5 usuarios registrados (Sumativa 1)
 val listaUsuarios = mutableStateListOf(
-    Usuario("admin", "1234"),
-    Usuario("profe", "duoc2026"),
-    Usuario("alumno", "pass1"),
-    Usuario("invitado", "inv123"),
-    Usuario("test", "test")
+    Usuario("admin admin", "admin@admin", "admin", "1234"),
+    Usuario("profe profe", "profe@profe", "profe", "duoc2026"),
+    Usuario("alumno alumno", "alumno@alumno", "alumno", "1234"),
+    Usuario("invitado invitado", "invitado@invitado", "invitado", "inv123"),
+    Usuario("test test", "test@test", "test", "test")
 )
 
 class MainActivity : ComponentActivity() {
